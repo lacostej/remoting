@@ -375,7 +375,7 @@ final class ProxyOutputStream extends OutputStream implements ErrorPropagatingOu
         }
 
         public String toString() {
-            return "ProxyOutputStream.EOF("+oid+")";
+            return "ProxyOutputStream.EOF("+oid+",error="+error+")";
         }
 
         private static final long serialVersionUID = 1L;
@@ -430,7 +430,7 @@ final class ProxyOutputStream extends OutputStream implements ErrorPropagatingOu
         }
 
         public String toString() {
-            return "ProxyOutputStream.Dead("+oid+")";
+            return "ProxyOutputStream.Dead("+oid+",exception="+createdAt.getCause()+")";
         }
 
         private static final long serialVersionUID = 1L;
